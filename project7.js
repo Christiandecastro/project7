@@ -15,6 +15,10 @@ function drawSquare(x, y, size, color) {
   // square drawing code here
 }
 
+function drawCircle(x,y,size, color) {
+  
+}
+
 // Step 3: Event listeners
 document.addEventListener("mousedown", function(e) {
   // what do you want to do when the user presses down
