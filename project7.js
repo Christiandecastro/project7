@@ -42,7 +42,7 @@ function drawTriangle(color,x, y, base) {
 
 // Step 3: Event listeners
 document.addEventListener("mousedown", function(e) {
-    var pt = transformPoint(e, screen)
+    var pt = transformPoint(e)
     shouldDraw = true
     var colorSelect = (document.getElementById("colorSelect").value)
       var shapeSelect = ((document.getElementById("shapeSelect").value))
@@ -50,12 +50,14 @@ document.addEventListener("mousedown", function(e) {
       var pt = transformPoint(e, screen)
       if(shouldDraw == true){
         if(colorSelect == "rainbow"){
-          colorSelect = 'hsl('+(rainbowColor += 1)+', 100%, 50%)';
+
         }
       if(shapeSelect == "square"){
     drawRectangle(colorSelect,sizeSelect,pt.x,pt.y);
   }else if(shapeSelect == "circle"){
+
     drawCircle(colorSelect,sizeSelect,pt.x,pt.y);
+
       }
       else{
           drawTriangle(colorSelect,pt.x,pt.y,sizeSelect);
@@ -73,7 +75,6 @@ document.addEventListener("mousemove", function(e) {
     var pt = transformPoint(e, screen)
       if(shouldDraw == true){
         if(colorSelect == "rainbow"){
-          colorSelect = 'hsl('+(rainbowColor += 1)+', 100%, 50%)';
         }
 
     if(shapeSelect == "square"){
